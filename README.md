@@ -1,115 +1,120 @@
-# Phase 2 Project
+# Project
 
-## Introduction
+This project was created in order to provide my wife an I a better idea of where to buy a home in Seattle. There was lots of housing data provided to us for the project; however, there were a few big issues that needed to be first dealt with before I was able to answer the questions I had. I focused a lot on location during this project because that and price are one of our top priorities we look at when purchasing a home. Having lived in Seattle before, I was familiar with the neighborhoods and had an idea of where we'd like to be, but wanted to use the data to bring out insights and see if it aligned with my assumptions. To do this, I discovered, and learned how to use the QGIS platform in order to gather the data I needed which was an adventure in itself!
 
-In this lesson, we review the guidelines for the Phase 2 Project.
+# Built With
 
-## Objectives
+- Python
+- QGIS
+- Plotly
+- Map Box
+- Seaborn
+- Pandas
+- Geopy
+- Numpy
+- Sci-kit Learn
+- Open Brewery Database
 
-You will be able to:
+# Question 1
 
-* Start your Phase 2 Project
-* Check that your project meets the requirements
-* Submit your project materials in Canvas
-* Prepare for your project review
+## Which houses are within a 10 minute drive from the hospital?
 
-## Project Overview
+### Thoughts
+Nobody likes a commute! Since I primarily work from home, my commute is measured more in a distance of feet rather than miles. My wife however prefers to live relatively close to work so she can respond quickly while on call and would prefer to be close enough to walk or ride a bike to work as a way to destress before or after a hard shift. 
 
-Another module down--you're almost half way there!
+The data given only provided coordinates of the houses so I found the coordinates of the hospital (University of Washington Medical Center). After that I also found a dataset from the Seattle Network Database which had all of the major roads within the Seattle proper area that I was able to import into QGIS. Overlaying the houses given from the dataset I'm then able to perform a network analysis with the two layers that calculates the drive time it takes to get from each house to the the coordinates given that represents the hospital. This calculation is done at a speed of about 31 miles per hour which I believe is underestimating the speed limit for paths outside of busy areas but thought it would make up for potential rush-hour delays.
 
-![awesome](https://raw.githubusercontent.com/learn-co-curriculum/dsc-phase-2-project-online/master/halfway-there.gif)
+<p float='right'>
+<img src='https://i.imgur.com/dvE3Hvs.png' height = 400 width= 400/>
+<img src='https://i.imgur.com/F719k70.png' height = 400 width= 400/>
+<img src='https://i.imgur.com/FFYLpHa.png' height = 400 width= 400/>
+<img src='https://i.imgur.com/kpRqyui.png' height = 400 width= 400/>
+</p>
 
-All that remains in Phase 2 is to put our newfound data science skills to use with a large project! You should expect this project to take between 20 and 25 hours of solid, focused effort. If you're done way quicker, go back and dig in deeper or try some of the optional "level up" suggestions. If you're worried that you're going to get to 30 hrs and still not even have the data imported, reach out to an instructor in Slack ASAP to get some help!
+### Findings
 
-### The Data
+Great! Based on the homes within the map above we've got a separate dataframe full of houses that are within 10 minutes away from the hospital. Even though we're open to that distance, the closer to work for her the better. I'm not too familiar with the Ravenna or Laurelhurst neighborhoods but based on the map it seems like the homes in Larelhurst are much more expensive than Ravenna and also Wallingford which might cause us to lean to those areas more.  
 
-For this project, you'll be working with the King County House Sales dataset. We've modified the dataset to make it a bit more fun and challenging.  The dataset can be found in the file `kc_house_data.csv` in the data folder in this repo.
+# Question 2
 
-The description of the column names can be found in the `column_names.md` file in the data folder in this repo. As with most real world data sets, the column names are not perfectly described, so you'll have to do some research or use your best judgment if you have questions relating to what the data means.
+## Which houses are within a 2 mile radius from a few of my favorite breweries?
 
-You'll clean, explore, and model this dataset with a multivariate linear regression to predict the sale price of houses as accurately as possible.
+### Thoughts
 
-### Business Problem
+Now that my wife is covered, I want to see which of these are close by to some of my favorite breweries in Seattle. We both enjoy eating out and trying new restuarants and breweries and many of the breweries are located within cool parts of town that we tend to find ourselves in anyways so if we can find a home that is both close to her work and in a part of town that we enjoy that would be ideal!
 
-For this project, it will be up to you to define a stakeholder and business problem appropriate to this dataset.
+The breweries I picked were completely based off of personal preference. We've shared many memories at these locations or with the products that they've offered and when we think about when we used to live in Seattle, taprooms and beer gardens are where we see ourselves. Except for Optimism. Their beer kinda sucks but they have a beautiful space. Honestly I only chose that because I felt like I had to represent the Cap hill neighborhood and wanted to stick with "breweries" and not drift off to "bars" or "taprooms; otherwise, Pine Box would've been the move.
 
-## Deliverables
+First I had to find the locations of a few of my favorite breweries. I could've done this manually just through google maps, but I thought it'd be good practice to put OBDB (Open Brewery Database) to use. I connected to the api and gathered data including the coordinates of those breweries and created a dataframe out of it. I then plotted it along with the houses, and used Geopy to calculate the distance in miles from each house to each brewery. After that I created a column that represented the brewery each house was closest to and that distance. I was then able to plot these on a map to visualize the housing options we had that were within 2 miles of these 6 breweries around Seattle. 
 
-There are four deliverables for this project:
+<p float='right'>
+<img src='https://i.imgur.com/02kQHuW.png' height = 700 width= 700/>
+<img src='https://i.imgur.com/pIPf2wF.png' height = 700 width= 700/>
+</p>
 
-1. A **GitHub repository**
-2. A **Jupyter Notebook**
-3. A non-technical presentation **slide deck**
-4. A non-technical presentation **recording**
+### Findings
 
-Keep in mind that the audience for these deliverables is not only your teacher, but also potential employers. Employers will look at your project deliverables to evaluate multiple skills, including coding, modeling, communication, and domain knowledge. You will want to polish these as much as you can, both during the course and afterwards.
+Good thing that the hospital is located where it is! It looks like there's plenty of overlap in houses that fall within both 10 minutes of driving distance to the hospital and a 2 mile radius of some of my favorite breweries! Based on these maps and only these two variables, it seems like we'd try to look for a house in the Fremont or Wallingford neighborhoods, which actually falls in line to where we'd like to be! 
 
-### GitHub Repository
+The hospital is located in the University District which is filled with student housing and not exactly a place we want to live at this point in our lives. Fremont is kind of a trendy/artsy neighborhood with fantastic food and drink options for us to enjoy!
 
-Your GitHub repository is the public-facing version of your project that your instructors and potential employers will see - make it as accessible as you can. At a minimum, it should contain all your project files and a README.md file that summarizes your project and helps visitors navigate the repository.
+# Question 3
 
-### Jupyter Notebook
+## Does a house position within 1/4 mile of the water affect the price of homes?
 
-Your Jupyter Notebook is the primary source of information about your analysis. At a minimum, it should contain or import all of the code used in your project and walk the reader through your project from start to finish. You may choose to use multiple Jupyter Notebooks in your project, but you should have one that provides a full project overview as a point of entry for visitors.
+### Thoughts
+With so much water around Seattle, I would imagine there are several properties that would qualify as "waterfront properties". I wanted to know if being close to the water had a significant impact on the price. The given dataset included a "waterfront" column marked with 1's or 0's to denote if a home is or is not a waterfront property respectively. After exploring the data, I realized that there seems to be an inconsistency within the data. The data doesn't seem to properly reflect homes that are on the waterfront, and seems to be missing several homes that should be labeled as "waterfront" but are not. In order to fix this problem, I was able to source a dataset from the USGS (United States Geological Survey) that displayed the bodies of water around Seattle. Importing this data as a layer within QGIS, I was then able to find the distance of each house to the nearest body of water. One of the issues I had initially was the prevalence of small ponds or lakes around King County. I decided to narrow down qualifying bodies of water to only large lakes and bays (including Greenlake) as I don't believe having a house on with a view of a small pond is an incredibly valued feature. Below, the first image shows the original file I started with showing all the small lakes that I needed to remove. The map is slightly more zoomed out and the bodies of water are colored in blue to be more reconizable. The second image shows a map of each house and a line that represents the distance from that house to the nearest body of water. This is before removing the small lakes and ponds from the dataset. The third image shows the lines from each house to each major body of water, and I removed the dots for each house to get a cleaner view.
 
-For this project, your Jupyter Notebook should meet the following specifications:
+<br/>
 
-#### Organization/Code Cleanliness
+<div>
+<img src='https://i.imgur.com/94Ghx0p.png' height = 500 width= 500/>
+<img src='https://i.imgur.com/j3IdkzK.png' height = 500 width= 500/>
+<img src='https://i.imgur.com/m3jlQAr.png' height = 500 width= 500/>
+</div>
 
-* The notebook should be well organized, easy to follow,  and code should be commented where appropriate.  
-    * Level Up: The notebook contains well-formatted, professional looking markdown cells explaining any substantial code.  All functions have docstrings that act as professional-quality documentation
-* The notebook is written for technical audiences with a way to both understand your approach and reproduce your results. The target audience for this deliverable is other data scientists looking to validate your findings.
+<br/>
+<br/>
 
-#### Visualizations & EDA
+After exporting that distance data from QGIS, I was able to work with it in Python using the same Plotly/Mapbox libraries I used for the first two quesetions. The first image shows the initial representation of waterfront homes with the given dataset while the second image displays another map showing each house with colored by it's distance away from the closest body of water. This map wasn't the most informative. There's so much water around the Seattle area that the vast majority of homes are within 5 miles and so most of the homes are colored dark blue. There were houses over 30 miles away in the South East that are out of frame and you can see the shade of dark blue start turning purple but it still didn't offer as much information as I'd prefer. I decided to define a waterfront property as being within 1/4 mile away from the shore and rebuild our map based on this metric which told a much better story.
 
-* Your project contains at least 4 meaningful data visualizations, with corresponding interpretations. All visualizations are well labeled with axes labels, a title, and a legend (when appropriate)  
-* You pose at least 3 meaningful questions and answer them through EDA.  These questions should be well labeled and easy to identify inside the notebook.
-    * **Level Up**: Each question is clearly answered with a visualization that makes the answer easy to understand.   
-* Your notebook should contain 1 - 2 paragraphs briefly explaining your approach to this project.
+<br/>
+<br/>
 
-#### Model Quality/Approach
+<div>
+<img src='https://i.imgur.com/0s2GCng.png' height = 500 width= 500/>
+<img src='https://i.imgur.com/7LBUdQH.png' height = 500 width= 500/>
+<img src='https://i.imgur.com/KDbcnkb.png' height = 500 width= 500/>
+</div>
 
-* Your model should not include any predictors with p-values greater than .05.  
-* Your notebook shows an iterative approach to modeling, and details the parameters and results of the model at each iteration.  
-    * **Level Up**: Whenever necessary, you briefly explain the changes made from one iteration to the next, and why you made these choices.  
-* You provide at least 1 paragraph explaining your final model.   
-* You pick at least 3 coefficients from your final model and explain their impact on the price of a house in this dataset.   
+### Findings
+Much better. Now our data more accurately represents what is and isn't a waterfront property and we can also zoom in and visually inspect some information about each home. Just browing the map it does look like that houses along the waterfront tend to be more expensive than those more inland. However there are exceptions to that most notably around the Lower Queen Anne, Capitol Hill, and Ashwood neigborhoods. Off of memory I know that Queen Anne is very close to South Lake Union which is where the Amazon headquarters is, Capitol Hill is a very trendy and busy part of town, and Ashwood is relatively close to where Microsofts headquarters is it makes a bit of sense to me that these areas might have more expensive homes. 
 
-### Non-Technical Presentation Slides and Recording
+After this, I conducted a hypothesis test that proved that a house located within 1/4 mile from the shore does have an affect on price.
 
-Your non-technical presentation is your opportunity to communicate clearly and concisely about your project and it's real-world relevance. The target audience should be people with limited technical knowledge who may be interested in leveraging your project. For Phase 1, these would be Microsoft executives interested in making decisions about movie development.
+# Linear Regression
 
-Your presentation should:
+Using a linear regression model I was able to explain over 90% of the variance of price using the square feet of living space, the ratio of bedrooms to bathrooms, and the distance from the closest of 6 breweries. Below are the results of my OLS model and the normality and homoskedasticity of the resulting residuals.
 
-* Contain between 5 - 10 professional-quality slides.  
-    * **Level Up**: The slides should use visualizations whenever possible, and avoid walls of text.
-* Take no more than 5 minutes to present.   
-* Avoid technical jargon and explain the results in a clear, actionable way for non-technical audiences.
+<br/>
+<br/>
 
-**_Based on the results of your models, your presentation should discuss at least two concrete features that highly influence housing prices._**
+<p>
+<img src='https://i.imgur.com/mBKpFBg.png' height = 500 width= 500/>
+<img src='https://i.imgur.com/zF4xI39.png' height = 500 width= 500/>
+<img src='https://i.imgur.com/ihJZdZW.png' height = 500 width= 500/>
+</p>
 
-We recommend using Google Slides, PowerPoint or Keynote to create your presentation slides. We recommend using Zoom to record your live presentation to a local video file ([instructions here][]) - other options include Quicktime, PowerPoint, or Nimbus. Video files must be under 500 MB and formatted as 3GP, ASF, AVI, FLV, M4V, MOV, MP4, MPEG, QT, or WMV.
+# Future Work
 
-## Getting Started
+If I had more time - 
 
-Please start by reviewing this document. If you have any questions, please ask them in Slack ASAP so (a) we can answer the questions and (b) so we can update this document to make it clearer.
+- I'd like to apply the same methodology I used for travel time to the hospital to all 6 of the breweries as well but instead calculate for walking time instead of driving time. Once I have that calculation for all the houses to their closest breweries. I'd like to map it out by binning the walking time in 5 minute increments around the breweries so that I'm able to toggle on and off the walking time of all the houses within my maps. 
 
-**When you start on the project, reach out to an instructor immediately via Slack to let them know and schedule your project review.** If you're not sure who to schedule with, please ask in your cohort channel in Slack.
+- I'd also like to see how the prevalance of farmers markets affect housing prices within the area. My wife and I would frequent the Ballard and University Districts Farmers Markets and still reminese over the smell of fresh donuts and delightfully salty cheeses we would pick up over the weekend, not to mention how hard it was to find parking. There are a number of large farmers markets in Seattle and I think it would be interesting to see how the proximity of houses to these hubs of sustainability and hipster fare affect housing prices within the area.
 
-Once you're done with the numbered topics in Phase 1, please start on the project. Do that by forking [the Phase 2 Project Repository][], cloning it locally, and working in the `student.ipynb` file. Make sure to also add and commit a PDF of your presentation to your repository with a file name of `presentation.pdf`.
 
-## Project Submission and Review
 
-Review [the Phase Project Submission and Review guidance][] to learn how to submit your project and how it will be reviewed. Your project must pass review for you to progress to the next Phase.
 
-**Please note: We need to receive your complete submission at least 24 hours before your review to confirm that you are prepared for the review. If you wish to revise your submission, please do so no later than 3 hours before your review so that we can have time to look at your updated materials.**
 
-## Summary
 
-The end-of-phase projects and project reviews are a critical part of the program. They give you a chance to both bring together all the skills you've learned into realistic projects and to practice key "business judgement" and communication skills that you otherwise might not get as much practice with.
-
-The projects are serious and important - they can be passed and they can be failed. Take the project seriously, put the time in, ask for help from your peers or instructors early and often if you need it, and treat the review as a job interview and you'll do great. We're rooting for you to succeed and we're only going to ask you to take a review again if we believe that you need to. We'll also provide open and honest feedback so you can improve as quickly and efficiently as possible.
-
-[the Phase 2 Project Repository]: https://github.com/learn-co-curriculum/dsc-phase-2-project-online
-[instructions here]: https://support.zoom.us/hc/en-us/articles/201362473-Local-recording
-[the Phase Project Submission and Review guidance]: https://github.com/learn-co-curriculum/dsc-project-submissions-online
