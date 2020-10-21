@@ -2,6 +2,8 @@
 
 This project was created in order to provide my wife an I a better idea of where to buy a home in Seattle. There was lots of housing data provided to us for the project; however, there were a few big issues that needed to be first dealt with before I was able to answer the questions I had. I focused a lot on location during this project because that and price are one of our top priorities we look at when purchasing a home. Having lived in Seattle before, I was familiar with the neighborhoods and had an idea of where we'd like to be, but wanted to use the data to bring out insights and see if it aligned with my assumptions. To do this, I discovered, and learned how to use the QGIS platform in order to gather the data I needed which was an adventure in itself!
 
+Due to a git snafu which was definitely a learning experience, I lost my actual power point file. I do still have the [video presentation](https://drive.google.com/file/d/1pSBoMdj5hw3OgT00YLVCczf-W-REhi2p/view?usp=sharing) of myself speaking over my slides though so feel free to take a look! Please note that this is before I added my final thank you slide!
+
 # Built With
 
 - Python
@@ -112,9 +114,3 @@ If I had more time -
 - I'd like to apply the same methodology I used for travel time to the hospital to all 6 of the breweries as well but instead calculate for walking time instead of driving time. Once I have that calculation for all the houses to their closest breweries. I'd like to map it out by binning the walking time in 5 minute increments around the breweries so that I'm able to toggle on and off the walking time of all the houses within my maps. 
 
 - I'd also like to see how the prevalance of farmers markets affect housing prices within the area. My wife and I would frequent the Ballard and University Districts Farmers Markets and still reminese over the smell of fresh donuts and delightfully salty cheeses we would pick up over the weekend, not to mention how hard it was to find parking. There are a number of large farmers markets in Seattle and I think it would be interesting to see how the proximity of houses to these hubs of sustainability and hipster fare affect housing prices within the area.
-
-
-
-
-
-
