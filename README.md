@@ -27,10 +27,10 @@ Nobody likes a commute! Since I primarily work from home, my commute is measured
 The data given only provided coordinates of the houses so I found the coordinates of the hospital (University of Washington Medical Center). After that I also found a dataset from the Seattle Network Database which had all of the major roads within the Seattle proper area that I was able to import into QGIS. Overlaying the houses given from the dataset I'm then able to perform a network analysis with the two layers that calculates the drive time it takes to get from each house to the the coordinates given that represents the hospital. This calculation is done at a speed of about 31 miles per hour which I believe is underestimating the speed limit for paths outside of busy areas but thought it would make up for potential rush-hour delays.
 
 <p float='right'>
-<img src='https://i.imgur.com/dvE3Hvs.png' height = 400 width= 400/>
-<img src='https://i.imgur.com/F719k70.png' height = 400 width= 400/>
-<img src='https://i.imgur.com/FFYLpHa.png' height = 400 width= 400/>
-<img src='https://i.imgur.com/kpRqyui.png' height = 400 width= 400/>
+<img src='https://i.imgur.com/dvE3Hvs.png' height = 300 width= 300/>
+<img src='https://i.imgur.com/F719k70.png' height = 300 width= 300/>
+<img src='https://i.imgur.com/FFYLpHa.png' height = 300 width= 300/>
+<img src='https://i.imgur.com/kpRqyui.png' height = 300 width= 300/>
 </p>
 
 ### Findings
@@ -50,8 +50,8 @@ The breweries I picked were completely based off of personal preference. We've s
 First I had to find the locations of a few of my favorite breweries. I could've done this manually just through google maps, but I thought it'd be good practice to put OBDB (Open Brewery Database) to use. I connected to the api and gathered data including the coordinates of those breweries and created a dataframe out of it. I then plotted it along with the houses, and used Geopy to calculate the distance in miles from each house to each brewery. After that I created a column that represented the brewery each house was closest to and that distance. I was then able to plot these on a map to visualize the housing options we had that were within 2 miles of these 6 breweries around Seattle. 
 
 <p float='right'>
-<img src='https://i.imgur.com/02kQHuW.png' height = 700 width= 700/>
-<img src='https://i.imgur.com/pIPf2wF.png' height = 700 width= 700/>
+<img src='https://i.imgur.com/02kQHuW.png' height = 400 width= 400/>
+<img src='https://i.imgur.com/pIPf2wF.png' height = 400 width= 400/>
 </p>
 
 ### Findings
@@ -70,9 +70,9 @@ With so much water around Seattle, I would imagine there are several properties 
 <br/>
 
 <div>
-<img src='https://i.imgur.com/94Ghx0p.png' height = 500 width= 500/>
-<img src='https://i.imgur.com/j3IdkzK.png' height = 500 width= 500/>
-<img src='https://i.imgur.com/m3jlQAr.png' height = 500 width= 500/>
+<img src='https://i.imgur.com/94Ghx0p.png' height = 300 width= 300/>
+<img src='https://i.imgur.com/j3IdkzK.png' height = 300 width= 300/>
+<img src='https://i.imgur.com/m3jlQAr.png' height = 300 width= 300/>
 </div>
 
 <br/>
@@ -84,9 +84,9 @@ After exporting that distance data from QGIS, I was able to work with it in Pyth
 <br/>
 
 <div>
-<img src='https://i.imgur.com/0s2GCng.png' height = 500 width= 500/>
-<img src='https://i.imgur.com/7LBUdQH.png' height = 500 width= 500/>
-<img src='https://i.imgur.com/KDbcnkb.png' height = 500 width= 500/>
+<img src='https://i.imgur.com/0s2GCng.png' height = 300 width= 300/>
+<img src='https://i.imgur.com/7LBUdQH.png' height = 300 width= 300/>
+<img src='https://i.imgur.com/KDbcnkb.png' height = 300 width= 300/>
 </div>
 
 ### Findings
@@ -102,9 +102,9 @@ Using a linear regression model I was able to explain over 90% of the variance o
 <br/>
 
 <p>
-<img src='https://i.imgur.com/mBKpFBg.png' height = 500 width= 500/>
-<img src='https://i.imgur.com/zF4xI39.png' height = 500 width= 500/>
-<img src='https://i.imgur.com/ihJZdZW.png' height = 500 width= 500/>
+<img src='https://i.imgur.com/mBKpFBg.png' height = 300 width= 300/>
+<img src='https://i.imgur.com/zF4xI39.png' height = 300 width= 300/>
+<img src='https://i.imgur.com/ihJZdZW.png' height = 300 width= 300/>
 </p>
 
 # Future Work
