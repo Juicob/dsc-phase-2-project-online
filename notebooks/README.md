@@ -137,16 +137,16 @@ Using a linear regression model I was able to explain over 90% of the variance o
 
 <table>
     <tr>
-        <td>
-<img src='https://i.imgur.com/mBKpFBg.png' height = 200 width= 200/>
+        <td style="width:300px; height:300px; text-align:center; vertical-align:middle">
+<img src='https://i.imgur.com/mBKpFBg.png'>
         </td>
-        <td>
-<img src='https://i.imgur.com/zF4xI39.png' height = 200 width= 200/>
+        <td style="width:300px; height:300px; text-align:center; vertical-align:middle">
+<img src='https://i.imgur.com/zF4xI39.png'>
         </td>
-        <td>
-<img src='https://i.imgur.com/ihJZdZW.png' height = 200 width= 200/>
+        <td style="width:300px; height:300px; text-align:center; vertical-align:middle">
+<img src='https://i.imgur.com/ihJZdZW.png'>
         </td>
-    </td>
+    </tr>
 </table>
         
 
