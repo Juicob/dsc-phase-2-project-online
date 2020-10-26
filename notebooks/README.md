@@ -89,13 +89,13 @@ With so much water around Seattle, I would imagine there are several properties 
 <table>
     <tr>
         <td style="width:300px; height:300px; text-align:center; vertical-align:middle">
-<img src='https://i.imgur.com/94Ghx0p.png' />
+<img src='https://i.imgur.com/94Ghx0p.png' style="display:block;" width="300" height="300"/>
         </td>
         <td style="width:300px; height:300px; text-align:center; vertical-align:middle">
-            <img src='https://i.imgur.com/j3IdkzK.png' />
+            <img src='https://i.imgur.com/j3IdkzK.png' style="display:block;" width="300" height="300"/>
         </td>
         <td style="width:300px; height:300px; text-align:center; vertical-align:middle">
-<img src='https://i.imgur.com/m3jlQAr.png' />
+<img src='https://i.imgur.com/m3jlQAr.png' style="display:block;" width="300" height="300"/>
         </td>
     </tr>
 </table>
@@ -111,13 +111,13 @@ After exporting that distance data from QGIS, I was able to work with it in Pyth
 <table>
     <tr>
         <td style="width:300px; height:300px; text-align:center; vertical-align:middle">
-            <img src='https://i.imgur.com/0s2GCng.png' />
+            <img src='https://i.imgur.com/0s2GCng.png' style="display:block;" width="300" height="300"/>
         </td>
         <td style="width:300px; height:300px; text-align:center; vertical-align:middle">
-<img src='https://i.imgur.com/7LBUdQH.png' />
+<img src='https://i.imgur.com/7LBUdQH.png' style="display:block;" width="300" height="300"/>
         </td>
         <td style="width:300px; height:300px; text-align:center; vertical-align:middle">
-<img src='https://i.imgur.com/KDbcnkb.png' />
+<img src='https://i.imgur.com/KDbcnkb.png' style="display:block;" width="300" height="300"/>
         </td>
     </tr>
     </table>
