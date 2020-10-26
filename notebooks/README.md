@@ -29,16 +29,16 @@ The data given only provided coordinates of the houses so I found the coordinate
 <table align="center">
 <tr>
 <td style="width:300px; height:300px; text-align:center; vertical-align:middle">
-<img src='https://i.imgur.com/dvE3Hvs.png' style="max-height:100%; max-width:100%"/>
+<img src='https://i.imgur.com/dvE3Hvs.png' style="display:block;" width="300" height="300"/>
 </td>
 <td style="width:300px; height:300px; text-align:center; vertical-align:middle">
-<img src='https://i.imgur.com/F719k70.png' style="max-height:100%; max-width:100%"/>
+<img src='https://i.imgur.com/F719k70.png' style="display:block;" width="300" height="300"/>
 </td>
 <td style="width:300px; height:300px; text-align:center; vertical-align:middle">
-<img src='https://i.imgur.com/FFYLpHa.png' style="max-height:100%; max-width:100%"/>
+<img src='https://i.imgur.com/FFYLpHa.png' style="display:block;" width="300" height="300"/>
 </td>
 <td style="width:300px; height:300px; text-align:center; vertical-align:middle">
-<img src='https://i.imgur.com/kpRqyui.png' style="max-height:100%; max-width:100%"/>
+<img src='https://i.imgur.com/kpRqyui.png' style="display:block;" width="300" height="300"/>
 </td>
 </tr>
 </table>
