@@ -28,17 +28,17 @@ The data given only provided coordinates of the houses so I found the coordinate
 
 <table>
 <tr>
-<td>
-<img src='https://i.imgur.com/dvE3Hvs.png' height = 400 width= 400/>
+<td style="width:300px; height:300px; text-align:center; vertical-align:middle">
+<img src='https://i.imgur.com/dvE3Hvs.png' width="100"/>
 </td>
-<td>
-<img src='https://i.imgur.com/F719k70.png' height = 400 width= 400/>
+<td style="width:300px; height:300px; text-align:center; vertical-align:middle">
+<img src='https://i.imgur.com/F719k70.png' width="100"/>
 </td>
-<td>
-<img src='https://i.imgur.com/FFYLpHa.png' height = 400 width= 400/>
+<td style="width:300px; height:300px; text-align:center; vertical-align:middle">
+<img src='https://i.imgur.com/FFYLpHa.png' width="100"/>
 </td>
-<td>
-<img src='https://i.imgur.com/kpRqyui.png' height = 400 width= 400/>
+<td style="width:300px; height:300px; text-align:center; vertical-align:middle">
+<img src='https://i.imgur.com/kpRqyui.png' width="100"/>
 </td>
 </tr>
 </table>
